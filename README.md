@@ -1,10 +1,10 @@
 
 
-[![Issue Count](https://codeclimate.com/github/RobertDober/lab42_rgxargs/badges/issue_count.svg)](https://codeclimate.com/github/RobertDober/lab42_rgxargs)
-[![CI](https://github.com/robertdober/lab42_rgxargs/workflows/CI/badge.svg)](https://github.com/robertdober/lab42_rgxargs/actions)
-[![Coverage Status](https://coveralls.io/repos/github/RobertDober/lab42_rgxargs/badge.svg?branch=master)](https://coveralls.io/github/RobertDober/lab42_rgxargs?branch=master)
-[![Gem Version](https://badge.fury.io/rb/lab42_rgxargs.svg)](http://badge.fury.io/rb/lab42_rgxargs)
-[![Gem Downloads](https://img.shields.io/gem/dt/lab42_rgxargs.svg)](https://rubygems.org/gems/lab42_rgxargs)
+[![Issue Count](https://codeclimate.com/github/RobertDober/l42_map/badges/issue_count.svg)](https://codeclimate.com/github/RobertDober/l42_map)
+[![CI](https://github.com/robertdober/l42_map/workflows/CI/badge.svg)](https://github.com/robertdober/l42_map/actions)
+[![Coverage Status](https://coveralls.io/repos/github/RobertDober/l42_map/badge.svg?branch=master)](https://coveralls.io/github/RobertDober/l42_map?branch=master)
+[![Gem Version](https://badge.fury.io/rb/l42_map.svg)](http://badge.fury.io/rb/l42_map)
+[![Gem Downloads](https://img.shields.io/gem/dt/l42_map.svg)](https://rubygems.org/gems/l42_map)
 <!--
      [![Code Climate](https://codeclimate.com/github/RobertDober/lab42_streams/badges/gpa.svg)](https://codeclimate.com/github/RobertDober/lab42_streams)
   [![Issue Count](https://codeclimate.com/github/RobertDober/lab42_streams/badges/issue_count.svg)](https://codeclimate.com/github/RobertDober/lab42_streams)
