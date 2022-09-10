@@ -1,13 +1,19 @@
 # frozen_string_literal: true
 
 require_relative 'map/api'
+require_relative 'map/enumerable_api'
 module L42
   class Map
     RestrictedNames = %i[
-      empty? fetch merge slice to_h with_default without
+    empty? fetch merge slice to_h with_default without
     ].freeze
 
     include Api
+    include EnumerableApi
+
+    def ==(other)
+      self.class == other.class && hash == other.to_h
+    end
 
     def with_default(default)
       @default = default
@@ -22,6 +28,12 @@ module L42
       @default = nil
       @hash    = kwds
       (kwds.keys - RestrictedNames).each(&_define_accessor_method)
+    end
+
+    def _clone(with_hash)
+      self.class.new(**with_hash).tap do |new_instance|
+        new_instance.with_default(default) if default
+      end
     end
 
     def _define_accessor_method

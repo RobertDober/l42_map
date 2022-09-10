@@ -17,9 +17,18 @@ module L42
 
       def merge(*args, &blk)
         hash1 = hash.merge(*args, &blk)
-        self.class.new(**hash1).tap do |new_instance|
-          new_instance.with_default(default) if default
-        end
+        _clone(hash1)
+      end
+
+      def slice(*keys)
+        hash1 = hash.slice(*keys)
+        _clone(hash1)
+      end
+
+      def to_h; hash end
+
+      def without(*keys)
+        slice(*(hash.keys - keys))
       end
     end
   end

@@ -108,10 +108,33 @@ Then any access will yield 42
 And the default value is passed on to clones
 ```ruby
     also_wd = wd.merge(a: 43)
+    expect(wd.a).to eq(42)
     expect(also_wd.a).to eq(43)
     expect(also_wd.b).to eq(42)
 ```
 
+#### Context `Hash` methods
+
+And our instance behaves much like a `Hash`
+```ruby
+    expect(map.slice(:a, :c)).to eq(L42::Map.new(a: 10, c: 30))
+
+```
+
+#### Additional methods
+
+And we can remove keys
+```ruby
+    expect(map.without(:a, :b)).to eq(L42::Map.new(c: 30))
+```
+
+### Context `Enumerable`
+
+And we can iterate
+```ruby
+    result = map.inject(0) { |s, (_k, v)| s + v }
+    expect(result).to eq(60)
+```
 ## LICENSE
 
 Copyright 2022] Robert Dober robert.dober@gmail.com,

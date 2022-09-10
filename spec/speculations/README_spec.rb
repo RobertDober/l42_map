@@ -65,9 +65,27 @@ RSpec.describe "README.md" do
         end
         it "the default value is passed on to clones (README.md:109)" do
           also_wd = wd.merge(a: 43)
+          expect(wd.a).to eq(42)
           expect(also_wd.a).to eq(43)
           expect(also_wd.b).to eq(42)
         end
+      end
+      # README.md:116
+      context "`Hash` methods" do
+        it "our instance behaves much like a `Hash` (README.md:119)" do
+          expect(map.slice(:a, :c)).to eq(L42::Map.new(a: 10, c: 30))
+
+        end
+        it "we can remove keys (README.md:127)" do
+          expect(map.without(:a, :b)).to eq(L42::Map.new(c: 30))
+        end
+      end
+    end
+    # README.md:131
+    context "`Enumerable`" do
+      it "we can iterate (README.md:134)" do
+        result = map.inject(0) { |s, (_k, v)| s + v }
+        expect(result).to eq(60)
       end
     end
   end
