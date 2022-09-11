@@ -13,7 +13,7 @@
 
 # l42_map
 
-Immutable OpenStruct On Steroids
+Immutable OpenStruct On Steroids, combining Hash and OpenStruct semantics
 
 ## How does it work?
 
@@ -134,6 +134,17 @@ And we can iterate
 ```ruby
     result = map.inject(0) { |s, (_k, v)| s + v }
     expect(result).to eq(60)
+```
+
+### Context Pattern Matching
+
+And of course it behaves like a Hash in pattern matching
+```ruby
+    map => c:
+    expect(c).to eq(30)
+    expect {
+      map => a:, b:, **nil
+    }.to raise_error(NoMatchingPatternError) # sic, it is indeed a PatternMatchingError
 ```
 ## LICENSE
 

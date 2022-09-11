@@ -2,6 +2,7 @@
 
 require_relative 'map/api'
 require_relative 'map/enumerable_api'
+require_relative 'map/pattern_matching_api'
 module L42
   class Map
     RestrictedNames = %i[
@@ -10,6 +11,7 @@ module L42
 
     include Api
     include EnumerableApi
+    include PatternMatchingApi
 
     def ==(other)
       self.class == other.class && hash == other.to_h

@@ -88,5 +88,15 @@ RSpec.describe "README.md" do
         expect(result).to eq(60)
       end
     end
+    # README.md:139
+    context "Pattern Matching" do
+      it "of course it behaves like a Hash in pattern matching (README.md:142)" do
+        map => c:
+        expect(c).to eq(30)
+        expect {
+        map => a:, b:, **nil
+        }.to raise_error(NoMatchingPatternError) # sic, it is indeed a PatternMatchingError
+      end
+    end
   end
 end

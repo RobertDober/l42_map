@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.version     = L42::Map::VERSION
   s.date        = '2022-09-10'
   s.summary     = 'Immutable OpenStruct On Steroids'
-  s.description = 'Immutable OpenStruct On Steroids'
+  s.description = "Immutable OpenStruct On Steroids, it combines Hash's and OpenStruct's semantics"
   s.authors     = ['Robert Dober']
   s.email       = 'robert.dober@gmail.com'
   s.files       = Dir.glob('lib/l42/**/*.rb')

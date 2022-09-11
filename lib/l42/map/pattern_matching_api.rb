@@ -2,7 +2,11 @@
 
 module L42
   class Map
-    VERSION = '0.1.1'
+    module PatternMatchingApi
+      def deconstruct_keys(_keys)
+        hash
+      end
+    end
   end
 end
 # SPDX-License-Identifier: Apache-2.0
