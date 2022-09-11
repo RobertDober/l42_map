@@ -29,11 +29,8 @@ jobs:
           bundle config set --local without benchmark
           bundle install --jobs=3
 
-      - name: Specuate
-        run: bundle exec speculate
-
       - name: Tests
-        run: bundle exec speculate
+        run: bundle exec rspec
 
       - name: Coveralls GitHub Action
         uses: coverallsapp/github-action@1.1.3
